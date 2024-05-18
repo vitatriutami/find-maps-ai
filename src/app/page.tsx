@@ -1,12 +1,15 @@
-import Image from "next/image";
+"use client";
 import dynamic from "next/dynamic";
-const DynamicMapComponent = dynamic(() => import ("./components/MapComponent"), {ssr: false});
+const DynamicMapComponent = dynamic(() => import("./components/MapComponent"), {
+  ssr: false,
+});
 
-
-export default function MyPage() {
+const MyPage = () => {
   return (
     <div>
       <DynamicMapComponent />
     </div>
   );
-}
+};
+
+export default MyPage;
